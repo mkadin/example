@@ -10,11 +10,6 @@ function example_menu() {
     'title' => 'My Example Form',
   );
   
-  $items['example-ajax'] = array(
-    'page callback' => 'example_ajax_callback',
-    'access arguments' => array('access content'),
-  );
-  
   return $items;
   
 }
@@ -23,13 +18,6 @@ function example_form($form, $form_state) {
   
   return $form;
 }
-
-
-
-
-
-
-
 
 
 $images = array(
