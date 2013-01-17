@@ -1,0 +1,44 @@
+<?php
+
+function example_menu() {
+  $items = array();
+  
+  $items['example-form'] = array(
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('example_form'),
+    'access arguments' => array('access content'),
+    'title' => 'My Example Form',
+  );
+  
+  $items['example-ajax'] = array(
+    'page callback' => 'example_ajax_callback',
+    'access arguments' => array('access content'),
+  );
+  
+  return $items;
+  
+}
+
+function example_form($form, $form_state) {
+  
+  return $form;
+}
+
+
+
+
+
+
+
+
+
+$images = array(
+  'orange' => 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR794UxnojK2ebJZhuo5AowFiPhJOIy4Qx--33FAQqdqQIeA6Q4vQ',
+  'apple' => 'http://reallyeating.areavoices.com/files/2012/08/apple1.jpg',
+);
+
+$fruits = array(
+  '0' => '--Select a Fruit--',
+  'orange' => 'Orange',
+  'apple' => 'Apple',
+);
